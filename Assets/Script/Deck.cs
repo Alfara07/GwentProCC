@@ -9,6 +9,9 @@ public class Deck : MonoBehaviour
     public GameObject[] Positions = new GameObject[10];
     public GameObject[] InvocationPositions = new GameObject[12];
     public bool[] VInvocation = new bool[12];
+    public GameObject[] IncreasedPositions = new GameObject[3];
+    public bool[] VIncreased = new bool[3];
+    public GameManager Manager;
 
     private int Position = 0;
 
@@ -54,9 +57,10 @@ public class Deck : MonoBehaviour
     {
         if (!card.GetComponent<CardsProperties>().invocado)
         {
+            //Invocacion de cartas unidad
             if (card.GetComponent<CardsProperties>().Type == "Gold Unit" || card.GetComponent<CardsProperties>().Type == "Silver Unit")
             {
-                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Melee")
+                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Melee") //Verifica si es tipo melee
                 {
                     for (int i = 0; i < 4; i++)
                     {
@@ -69,7 +73,7 @@ public class Deck : MonoBehaviour
                     }
                 }
 
-                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Range")
+                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Range") //Verifica si es tipo range
                 {
                     for (int i = 4; i < 8; i++)
                     {
@@ -81,7 +85,7 @@ public class Deck : MonoBehaviour
                         }
                     }
                 }
-                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Siege")
+                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Siege") // Verifica si es tipo Siege
                 {
                     for (int i = 8; i < 12; i++)
                     {
@@ -92,6 +96,42 @@ public class Deck : MonoBehaviour
                             return true;
                         }
                     }
+                }
+            }
+            //Verifcar Si es carta aumento
+            if(card.GetComponent<CardsProperties>().Type == "Increased")
+            {
+                if(card.GetComponent<IncreaseCardProperties>().affected == "Melee" && !VIncreased[0]) //Verifica si es melee
+                {
+                    card.transform.position = IncreasedPositions[0].transform.position;
+                }
+                if (card.GetComponent<IncreaseCardProperties>().affected == "Range" && !VIncreased[1]) //Verifica si es range
+                {
+                    card.transform.position = IncreasedPositions[1].transform.position;
+                }
+                if (card.GetComponent<IncreaseCardProperties>().affected == "Siege" && !VIncreased[2]) //Verifica si es siege
+                {
+                    card.transform.position = IncreasedPositions[2].transform.position;
+                }
+            }
+
+            //verificar si es carta clima
+            if(card.GetComponent<CardsProperties>().Type == "Weather")
+            {
+                if(card.GetComponent<WeatherCardProperties>().affected == "Melee" && !Manager.VWheather[0]) //Verifica si es melee
+                {
+                    Manager.VWheather[0] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
+                    card.transform.position = Manager.WheatherPositions[0].transform.position;//Accede a las posiciones clima del manager y mueve la carta
+                }
+                if (card.GetComponent<WeatherCardProperties>().affected == "Range" && !Manager.VWheather[1]) //Verifica si es melee
+                {
+                    Manager.VWheather[1] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
+                    card.transform.position = Manager.WheatherPositions[1].transform.position; //Accede a las posiciones clima del manager y mueve la carta
+                }
+                if (card.GetComponent<WeatherCardProperties>().affected == "Siege" && !Manager.VWheather[2]) //Verifica
+                {
+                    Manager.VWheather[2] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
+                    card.transform.position = Manager.WheatherPositions[2].transform.position;//Accede a las posiciones clima del manager y mueve la carta
                 }
             }
         }

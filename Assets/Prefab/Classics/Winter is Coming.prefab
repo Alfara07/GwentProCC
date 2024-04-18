@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4732380270321180099}
   - component: {fileID: 9005691981794261997}
   - component: {fileID: -3294477730769909086}
+  - component: {fileID: -6509792851393297326}
   m_Layer: 0
   m_Name: Winter is Coming
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   Name: Winter is Coming
   Faction: Classics
   Type: Weather
+  invocado: 0
 --- !u!61 &-3294477730769909086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,3 +129,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.68, y: 10.24}
   m_EdgeRadius: 0
+--- !u!114 &-6509792851393297326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6560143225611796425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 897170704ca864f44b42c618bf22a862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  affected: Melee

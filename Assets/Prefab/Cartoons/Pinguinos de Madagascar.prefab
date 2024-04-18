@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2676519179519056624}
   - component: {fileID: 1761619867508767966}
   - component: {fileID: 2245350808713511831}
+  - component: {fileID: -1549840677256845376}
   m_Layer: 0
   m_Name: Pinguinos de Madagascar
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   Name: Pinguinos de Madagascar
   Faction: Cartoons
   Type: Increased
+  invocado: 0
 --- !u!61 &2245350808713511831
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -127,3 +129,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.68, y: 10.24}
   m_EdgeRadius: 0
+--- !u!114 &-1549840677256845376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576340338725746938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9480396d3e9afb84ca62e626eeb55fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  affected: Melee
