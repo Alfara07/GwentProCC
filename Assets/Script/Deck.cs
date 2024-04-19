@@ -55,86 +55,144 @@ public class Deck : MonoBehaviour
     //Metodo para invocar las cartas en el campo
     public bool Invocar(GameObject card)
     {
-        if (!card.GetComponent<CardsProperties>().invocado)
+        if (card.GetComponent<CardsProperties>().Faction == "Classics" && Manager.player == 1 || card.GetComponent<CardsProperties>().Faction == "Cartoons" && Manager.player == 2)
         {
-            //Invocacion de cartas unidad
-            if (card.GetComponent<CardsProperties>().Type == "Gold Unit" || card.GetComponent<CardsProperties>().Type == "Silver Unit")
+            if (!card.GetComponent<CardsProperties>().invocado && !Manager.Jugada)
             {
-                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Melee") //Verifica si es tipo melee
+                //Invocacion de cartas unidad
+                if (card.GetComponent<CardsProperties>().Type == "Gold Unit" || card.GetComponent<CardsProperties>().Type == "Silver Unit")
                 {
-                    for (int i = 0; i < 4; i++)
+                    if (card.GetComponent<AttackCardProperties>().TypeAttack == "Melee") //Verifica si es tipo melee
                     {
-                        if (!VInvocation[i])
+                        for (int i = 0; i < 4; i++)
                         {
-                            card.transform.position = InvocationPositions[i].transform.position;
-                            VInvocation[i] = true;
-                            return true;
+                            if (!VInvocation[i])
+                            {
+                                card.transform.position = InvocationPositions[i].transform.position;
+                                VInvocation[i] = true;
+                                Manager.Jugada = true;
+                                Increment_power(card.GetComponent<AttackCardProperties>());
+                                Comprobar(card);
+                                return true;
+                            }
                         }
+                    }
+
+                    if (card.GetComponent<AttackCardProperties>().TypeAttack == "Range") //Verifica si es tipo range
+                    {
+                        for (int i = 4; i < 8; i++)
+                        {
+                            if (!VInvocation[i])
+                            {
+                                card.transform.position = InvocationPositions[i].transform.position;
+                                VInvocation[i] = true;
+                                Manager.Jugada = true;
+                                Increment_power(card.GetComponent<AttackCardProperties>());
+                                Comprobar(card);
+                                return true;
+                            }
+                        }
+                    }
+                    if (card.GetComponent<AttackCardProperties>().TypeAttack == "Siege") // Verifica si es tipo Siege
+                    {
+                        for (int i = 8; i < 12; i++)
+                        {
+                            if (!VInvocation[i])
+                            {
+                                card.transform.position = InvocationPositions[i].transform.position;
+                                VInvocation[i] = true;
+                                Manager.Jugada = true;
+                                Increment_power(card.GetComponent<AttackCardProperties>());
+                                Comprobar(card);
+                                return true;
+                            }
+                        }
+                    }
+                }
+                //Verifcar Si es carta aumento
+                if (card.GetComponent<CardsProperties>().Type == "Increased")
+                {
+                    if (card.GetComponent<IncreaseCardProperties>().affected == "Melee" && !VIncreased[0]) //Verifica si es melee
+                    {
+                        card.transform.position = IncreasedPositions[0].transform.position;
+                        Manager.Jugada = true;
+                        Comprobar(card);
+                        return true;
+                    }
+                    if (card.GetComponent<IncreaseCardProperties>().affected == "Range" && !VIncreased[1]) //Verifica si es range
+                    {
+                        card.transform.position = IncreasedPositions[1].transform.position;
+                        Manager.Jugada = true;
+                        Comprobar(card);
+                        return true;
+                    }
+                    if (card.GetComponent<IncreaseCardProperties>().affected == "Siege" && !VIncreased[2]) //Verifica si es siege
+                    {
+                        card.transform.position = IncreasedPositions[2].transform.position;
+                        Manager.Jugada = true;
+                        Comprobar(card);
+                        return true;
                     }
                 }
 
-                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Range") //Verifica si es tipo range
+                //verificar si es carta clima
+                if (card.GetComponent<CardsProperties>().Type == "Weather")
                 {
-                    for (int i = 4; i < 8; i++)
+                    if (card.GetComponent<WeatherCardProperties>().affected == "Melee" && !Manager.VWheather[0]) //Verifica si es melee
                     {
-                        if (!VInvocation[i])
-                        {
-                            card.transform.position = InvocationPositions[i].transform.position;
-                            VInvocation[i] = true;
-                            return true;
-                        }
+                        Manager.VWheather[0] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
+                        card.transform.position = Manager.WheatherPositions[0].transform.position;//Accede a las posiciones clima del manager y mueve la carta
+                        Manager.Jugada = true;
+                        Comprobar(card);
+                        return true;
                     }
-                }
-                if (card.GetComponent<AttackCardProperties>().TypeAttack == "Siege") // Verifica si es tipo Siege
-                {
-                    for (int i = 8; i < 12; i++)
+                    if (card.GetComponent<WeatherCardProperties>().affected == "Range" && !Manager.VWheather[1]) //Verifica si es melee
                     {
-                        if (!VInvocation[i])
-                        {
-                            card.transform.position = InvocationPositions[i].transform.position;
-                            VInvocation[i] = true;
-                            return true;
-                        }
+                        Manager.VWheather[1] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
+                        card.transform.position = Manager.WheatherPositions[1].transform.position; //Accede a las posiciones clima del manager y mueve la carta
+                        Manager.Jugada = true;
+                        Comprobar(card);
+                        return true;
                     }
-                }
-            }
-            //Verifcar Si es carta aumento
-            if(card.GetComponent<CardsProperties>().Type == "Increased")
-            {
-                if(card.GetComponent<IncreaseCardProperties>().affected == "Melee" && !VIncreased[0]) //Verifica si es melee
-                {
-                    card.transform.position = IncreasedPositions[0].transform.position;
-                }
-                if (card.GetComponent<IncreaseCardProperties>().affected == "Range" && !VIncreased[1]) //Verifica si es range
-                {
-                    card.transform.position = IncreasedPositions[1].transform.position;
-                }
-                if (card.GetComponent<IncreaseCardProperties>().affected == "Siege" && !VIncreased[2]) //Verifica si es siege
-                {
-                    card.transform.position = IncreasedPositions[2].transform.position;
-                }
-            }
-
-            //verificar si es carta clima
-            if(card.GetComponent<CardsProperties>().Type == "Weather")
-            {
-                if(card.GetComponent<WeatherCardProperties>().affected == "Melee" && !Manager.VWheather[0]) //Verifica si es melee
-                {
-                    Manager.VWheather[0] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
-                    card.transform.position = Manager.WheatherPositions[0].transform.position;//Accede a las posiciones clima del manager y mueve la carta
-                }
-                if (card.GetComponent<WeatherCardProperties>().affected == "Range" && !Manager.VWheather[1]) //Verifica si es melee
-                {
-                    Manager.VWheather[1] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
-                    card.transform.position = Manager.WheatherPositions[1].transform.position; //Accede a las posiciones clima del manager y mueve la carta
-                }
-                if (card.GetComponent<WeatherCardProperties>().affected == "Siege" && !Manager.VWheather[2]) //Verifica
-                {
-                    Manager.VWheather[2] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
-                    card.transform.position = Manager.WheatherPositions[2].transform.position;//Accede a las posiciones clima del manager y mueve la carta
+                    if (card.GetComponent<WeatherCardProperties>().affected == "Siege" && !Manager.VWheather[2]) //Verifica
+                    {
+                        Manager.VWheather[2] = true;//Accede a las posiciones verificadas de clima del manager y convierte en true
+                        card.transform.position = Manager.WheatherPositions[2].transform.position;//Accede a las posiciones clima del manager y mueve la carta
+                        Manager.Jugada = true;
+                        Comprobar(card);
+                        return true;
+                    }
                 }
             }
         }
-        return false;
+            return false;
+    }
+
+    //Funcion para agregar poder de la carta al campo
+    public void Increment_power(AttackCardProperties attack)
+    {
+        if (attack.GetComponent<CardsProperties>().Faction == "Classics")
+        {
+            Manager.poder1 += attack.Damage;
+        }
+        if (attack.GetComponent<CardsProperties>().Faction == "Cartoons")
+        {
+            Manager.poder2 += attack.Damage;
+        }
+    }
+
+    //Funcion para quitar carta de la mano al invocar y colocar en el array del manager de cartas en el campo
+    public void Comprobar(GameObject card)
+    {
+        for(int i = 0;i<Hands.Length;i++)
+        {
+            if (Hands[i] == card)
+            {
+                Manager.campo[Manager.camposASig] = card;
+                Manager.camposASig++;
+                Hands[i] = null;
+                break;
+            }
+        }
     }
 }

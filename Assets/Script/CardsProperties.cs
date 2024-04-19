@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class CardsProperties : MonoBehaviour
 {
@@ -11,22 +14,25 @@ public class CardsProperties : MonoBehaviour
     public bool invocado = false;
 
     //Localizando el Big Card
-    private SpriteRenderer BigCard;
+    private RawImage BigCard;
 
     private void Start()
     {
-        BigCard = GameObject.FindGameObjectWithTag("BigCard").GetComponent<SpriteRenderer>();
+        BigCard = GameObject.FindGameObjectWithTag("BigCard").GetComponent<RawImage>();
+        BigCard.transform.localScale = Vector3.zero;
     }
 
     //Metodos para mostrar y dejar de mostrar las cartas en grande
     private void OnMouseEnter()
     {
-        BigCard.sprite=GetComponent<SpriteRenderer>().sprite;
+        BigCard.texture=GetComponent<SpriteRenderer>().sprite.texture;
+        BigCard.transform.localScale = Vector3.one;
     }
 
     private void OnMouseExit()
     {
-        BigCard.sprite=null;
+        BigCard.texture=null;
+        BigCard.transform.localScale = Vector3.zero;
     }
 
     //Evento que llama al metodo de invocacion
@@ -35,6 +41,7 @@ public class CardsProperties : MonoBehaviour
         if(GameObject.FindGameObjectWithTag(Faction).GetComponent<Deck>().Invocar(gameObject))
         {
             invocado = true;
+
         }
     }
 }
