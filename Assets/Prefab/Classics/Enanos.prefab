@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: Enanos
   Faction: Classics
   Type: Increased
+  leer: '"Forja Enana"
+
+
+    Aumento (Asedio)'
   invocado: 0
 --- !u!61 &3247783605855245134
 BoxCollider2D:

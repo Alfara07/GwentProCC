@@ -102,6 +102,8 @@ MonoBehaviour:
   Name: Pikachu
   Faction: Cartoons
   Type: Gold Unit
+  leer: "\"Pikachu\"\n\nH\xE9roe (Distancia)\nPoder: 8"
+  invocado: 0
 --- !u!61 &2422101990870155061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 8
   TypeAttack: Range
+  afected_clim: 0
+  afected_Aum: 0

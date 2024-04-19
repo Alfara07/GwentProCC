@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: 'El Padrino '
   Faction: Classics
   Type: Increased
+  leer: '"El Padrino"
+
+
+    Aumento (Distancia)'
   invocado: 0
 --- !u!61 &5459555634650956204
 BoxCollider2D:

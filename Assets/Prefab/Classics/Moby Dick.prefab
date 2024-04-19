@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9005691981794261997}
   - component: {fileID: -4216734259644794872}
   - component: {fileID: -8370207154728170522}
+  - component: {fileID: -358081185048534720}
   m_Layer: 0
   m_Name: Moby Dick
   m_TagString: Untagged
@@ -102,6 +103,13 @@ MonoBehaviour:
   Name: Moby Dick
   Faction: Classics
   Type: Silver Unit
+  leer: '"Moby Dick"
+
+
+    Unidad (Asedio)
+
+    Poder: 3'
+  invocado: 0
 --- !u!61 &-4216734259644794872
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +150,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 3
   TypeAttack: Siege
+  afected_clim: 0
+  afected_Aum: 0
+--- !u!114 &-358081185048534720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6560143225611796425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522afbc609d303d439d7f0077888c82d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

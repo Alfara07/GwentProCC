@@ -102,6 +102,13 @@ MonoBehaviour:
   Name: Merlin
   Faction: Classics
   Type: Silver Unit
+  leer: '"Merlin"
+
+
+    Unidad (Distancia)
+
+    Poder: 4'
+  invocado: 0
 --- !u!61 &4909087163586443962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 4
   TypeAttack: Range
+  afected_clim: 0
+  afected_Aum: 0

@@ -16,7 +16,7 @@ public class Deck : MonoBehaviour
     private int Position = 0;
 
     //Metodo para llevar las cartas del mazo a la mano.
-    private void MASTER(int cant)
+    public void MASTER(int cant)
     {
         for (int x = 0; x < cant; x++)
         {
@@ -116,6 +116,7 @@ public class Deck : MonoBehaviour
                     {
                         card.transform.position = IncreasedPositions[0].transform.position;
                         Manager.Jugada = true;
+                        VIncreased[0] = true;
                         Comprobar(card);
                         return true;
                     }
@@ -123,6 +124,7 @@ public class Deck : MonoBehaviour
                     {
                         card.transform.position = IncreasedPositions[1].transform.position;
                         Manager.Jugada = true;
+                        VIncreased[1] = true;
                         Comprobar(card);
                         return true;
                     }
@@ -130,6 +132,7 @@ public class Deck : MonoBehaviour
                     {
                         card.transform.position = IncreasedPositions[2].transform.position;
                         Manager.Jugada = true;
+                        VIncreased[2] = true;
                         Comprobar(card);
                         return true;
                     }
@@ -161,6 +164,29 @@ public class Deck : MonoBehaviour
                         Manager.Jugada = true;
                         Comprobar(card);
                         return true;
+                    }
+                }
+
+                if(card.GetComponent<CardsProperties>().Type == "Clear Weather")
+                {
+                    Comprobar(card);
+                    Destroy(card);
+                    for(int i = 0; i< 3; i++)
+                    {
+                        Manager.VWheather[i] = false;
+                    }
+                    for(int i = 0; i < Manager.campo.Length; i++)
+                    {
+                        if (Manager.campo[i] != null)
+                        {
+                            if (Manager.campo[i].GetComponent<CardsProperties>().Type == "Weather")
+                            {
+                                Manager.campo[i].GetComponent<CardsProperties>().invocado = false;
+                                Manager.campo[i].GetComponent<WeatherCardProperties>().Decrement();
+                                Destroy(Manager.campo[i]);
+                                Manager.campo[i] = null;    
+                            }
+                        }
                     }
                 }
             }

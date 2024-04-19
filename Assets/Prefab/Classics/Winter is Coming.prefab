@@ -102,6 +102,7 @@ MonoBehaviour:
   Name: Winter is Coming
   Faction: Classics
   Type: Weather
+  leer: "\"Winter is Coming\"\n\nClima (Infanter\xEDa)"
   invocado: 0
 --- !u!61 &-3294477730769909086
 BoxCollider2D:

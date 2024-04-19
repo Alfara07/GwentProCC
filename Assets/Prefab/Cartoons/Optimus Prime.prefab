@@ -102,6 +102,13 @@ MonoBehaviour:
   Name: Optimus Prime
   Faction: Cartoons
   Type: Silver Unit
+  leer: '"Optimus Prime"
+
+
+    Unidad (Asedio)
+
+    Poder: 5'
+  invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 5
   TypeAttack: Siege
+  afected_clim: 0
+  afected_Aum: 0

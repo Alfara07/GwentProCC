@@ -102,6 +102,13 @@ MonoBehaviour:
   Name: Harry Potter
   Faction: Classics
   Type: Silver Unit
+  leer: '"Harry Potter"
+
+
+    Unidad (Distancia)
+
+    Poder: 5'
+  invocado: 0
 --- !u!61 &-6418274253186643293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 5
   TypeAttack: Range
+  afected_clim: 0
+  afected_Aum: 0

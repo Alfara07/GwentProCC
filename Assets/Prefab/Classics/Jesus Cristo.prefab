@@ -101,6 +101,8 @@ MonoBehaviour:
   Name: Jesus Cristo
   Faction: Classics
   Type: Leader
+  leer: "\"Jesus Cristo\"\n\nL\xEDder"
+  invocado: 0
 --- !u!61 &857802763097248397
 BoxCollider2D:
   m_ObjectHideFlags: 0

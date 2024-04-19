@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: Robin Hood
   Faction: Classics
   Type: Increased
+  leer: '"Robin Hood"
+
+
+    Aumento (Distancia)'
   invocado: 0
 --- !u!61 &268783059687583550
 BoxCollider2D:

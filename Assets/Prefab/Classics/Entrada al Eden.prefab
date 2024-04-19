@@ -101,6 +101,17 @@ MonoBehaviour:
   Name: Entrada al Eden
   Faction: Classics
   Type: Clear Weather
+  leer: '"Entrada al Eden"
+
+
+    Despeje
+
+
+    Habilidad:
+
+    Elimina las cartas
+    climas del campo'
+  invocado: 0
 --- !u!61 &-1107638252314211038
 BoxCollider2D:
   m_ObjectHideFlags: 0

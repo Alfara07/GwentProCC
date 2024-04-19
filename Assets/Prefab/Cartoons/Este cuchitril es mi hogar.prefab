@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4732380270321180099
 SpriteRenderer:
@@ -101,6 +101,17 @@ MonoBehaviour:
   Name: Este cuchitril es mi hogar
   Faction: Cartoons
   Type: Clear Weather
+  leer: '"Cuchitril"
+
+
+    Despeje
+
+
+    Habilidad:
+
+    Elimina las cartas climas
+    del campo'
+  invocado: 0
 --- !u!61 &-1107638252314211038
 BoxCollider2D:
   m_ObjectHideFlags: 0

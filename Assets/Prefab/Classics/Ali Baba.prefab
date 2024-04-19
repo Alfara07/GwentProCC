@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9005691981794261997}
   - component: {fileID: 9207799983204163246}
   - component: {fileID: 4764976686896533099}
+  - component: {fileID: 2737534600893358360}
   m_Layer: 0
   m_Name: Ali Baba
   m_TagString: Untagged
@@ -102,6 +103,8 @@ MonoBehaviour:
   Name: Ali Baba
   Faction: Classics
   Type: Silver Unit
+  leer: "\"Ali Baba\"\n\nUnidad (Infanter\xEDa)\nPoder: 3"
+  invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +145,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 3
   TypeAttack: Melee
+  afected_clim: 0
+  afected_Aum: 0
+--- !u!114 &2737534600893358360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6560143225611796425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6623b063607c2c44cba77144af2b72b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

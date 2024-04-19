@@ -101,6 +101,8 @@ MonoBehaviour:
   Name: Winter is Coming
   Faction: Classics
   Type: Decoy
+  leer: "\"Personaje Extra\"\n\nSe\xF1uelo"
+  invocado: 0
 --- !u!61 &-4279670466389327857
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: Pesteapocaliptica
   Faction: Classics
   Type: Weather
+  leer: '"Pesteapocaliptica"
+
+
+    Clima (Distancia)'
   invocado: 0
 --- !u!61 &-3294477730769909086
 BoxCollider2D:

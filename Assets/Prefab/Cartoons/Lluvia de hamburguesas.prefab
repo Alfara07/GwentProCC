@@ -102,6 +102,7 @@ MonoBehaviour:
   Name: Lluvia de hamburguesas
   Faction: Cartoons
   Type: Weather
+  leer: "\"Lluvia de Hamburguesas\"\n\nClima (Infanter\xEDa)"
   invocado: 0
 --- !u!61 &4483653559645964826
 BoxCollider2D:

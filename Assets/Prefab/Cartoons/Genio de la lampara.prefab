@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: Genio de la lampara
   Faction: Cartoons
   Type: Increased
+  leer: '"Ayuda de la Lampara"
+
+
+    Aumento (Distancia)'
   invocado: 0
 --- !u!61 &2245350808713511831
 BoxCollider2D:

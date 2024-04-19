@@ -102,6 +102,7 @@ MonoBehaviour:
   Name: Estampida Redonda
   Faction: Classics
   Type: Increased
+  leer: "\"Estampida Redonda\"\n\nAumento (Infanter\xEDa)\n"
   invocado: 0
 --- !u!61 &2245350808713511831
 BoxCollider2D:

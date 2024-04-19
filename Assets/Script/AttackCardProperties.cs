@@ -6,4 +6,6 @@ public class AttackCardProperties : MonoBehaviour
 {
     public int Damage;
     public string TypeAttack;
+    public bool afected_clim = false;
+    public bool afected_Aum = false;
 }

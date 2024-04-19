@@ -102,6 +102,8 @@ MonoBehaviour:
   Name: Tres Mosqueteros
   Faction: Classics
   Type: Silver Unit
+  leer: "\"Tres Mosqueteros\"\n\nUnidad (Infanter\xEDa)\nPoder: 5"
+  invocado: 0
 --- !u!61 &-4411497817102155346
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142,3 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 5
   TypeAttack: Melee
+  afected_clim: 0
+  afected_Aum: 0

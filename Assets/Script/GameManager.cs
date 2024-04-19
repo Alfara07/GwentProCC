@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public bool[] VWheather = new bool[3];
     public GameObject[] WheatherPositions = new GameObject[3];
     public GameObject[] campo = new GameObject[33];
+    public GameObject Dragon, Win1, Win2;
     public int camposASig = 0;
     public bool Jugada,player1Round,player2Round,End_ROUND = false;
     public int poder1, poder2, ronda1, ronda2;
@@ -41,38 +42,55 @@ public class GameManager : MonoBehaviour
     }
 
     //Funcion para determinar quien gana la ronda y hacer el conteo de rondas
+
     public void End_Round()
     {
         if(player1Round && player2Round)
         {
-            string ganador = "Empate";
             End_ROUND = true;
             if(poder1 < poder2)
             {
-                ganador = "Jugador 2 Win";
                 ronda2 += 1;
+                Dragon.SetActive(true);
+                Win2.SetActive(true);
+                StartCoroutine(Cerrar(Win2));
             }
 
             if (poder1 > poder2)
             {
-                ganador = "Jugador 1 Win";
                 ronda1 += 1;
+                Dragon.SetActive(true);
+                Win1.SetActive(true);
+                StartCoroutine(Cerrar(Win1));
+            }
+            if(poder1 == poder2)
+            {
+                ronda1++;
+                ronda2++;
             }
             player1Round = false;
             player2Round = false;
             poder1 = 0;
             poder2 = 0;
+            deck1.MASTER(2);
+            deck2.MASTER(2);
 
             for(int i =0; i < 33; i++)
             {
-                if (campo[i] != null)
-                {
+                
                     Destroy(campo[i]);
                     campo[i] = null;
                     camposASig = 0;
-                }
+                
 
             }
         }
+    }
+
+    IEnumerator Cerrar(GameObject obj)
+    {
+        yield return new WaitForSeconds(4);
+        Dragon.SetActive(false);
+        obj.SetActive(false);
     }
 }

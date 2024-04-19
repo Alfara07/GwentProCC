@@ -8,6 +8,7 @@ public class ChangeTurn : MonoBehaviour
     public bool camm1 = true;
     public bool camm2 = false;
     public GameManager gameManager;
+    public Deck deck1, deck2;
 
     //Metodo de cambio de turno
     public void Change()

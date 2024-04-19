@@ -102,6 +102,7 @@ MonoBehaviour:
   Name: Pinguinos de Madagascar
   Faction: Cartoons
   Type: Increased
+  leer: "\"Ayuda de Madagascar\"\n\nAumento (Infanter\xEDa)"
   invocado: 0
 --- !u!61 &2245350808713511831
 BoxCollider2D:

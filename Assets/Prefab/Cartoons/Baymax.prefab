@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: Baymax
   Faction: Cartoons
   Type: Increased
+  leer: '"Baymax"
+
+
+    Aumento (Asedio)'
   invocado: 0
 --- !u!61 &2245350808713511831
 BoxCollider2D:

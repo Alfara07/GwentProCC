@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: Odisea
   Faction: Classics
   Type: Weather
+  leer: '"Odisea"
+
+
+    Clima (Asedio)'
   invocado: 0
 --- !u!61 &4483653559645964826
 BoxCollider2D:

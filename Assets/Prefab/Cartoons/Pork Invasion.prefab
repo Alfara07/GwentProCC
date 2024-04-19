@@ -102,6 +102,10 @@ MonoBehaviour:
   Name: Pork Invasion
   Faction: Cartoons
   Type: Weather
+  leer: '"Invacion Porcina"
+
+
+    Clima (Asedio)'
   invocado: 0
 --- !u!61 &4483653559645964826
 BoxCollider2D:
