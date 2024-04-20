@@ -103,12 +103,8 @@ MonoBehaviour:
   Name: Peter Pan
   Faction: Cartoons
   Type: Silver Unit
-  leer: '"Peter Pan"
-
-
-    Unidad (Distancia)
-
-    Poder: 3'
+  leer: "\"Peter Pan\"\n\nUnidad (Distancia)\n\nHabilidad:\nElimina la carta con
+    menos Poder del rival\n "
   invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:

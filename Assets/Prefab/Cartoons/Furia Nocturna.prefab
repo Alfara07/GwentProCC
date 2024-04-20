@@ -108,7 +108,13 @@ MonoBehaviour:
 
     Unidad (Asedio)
 
-    Poder: 3'
+
+    Habilidad:
+
+    Invoca una
+    carta clima de la mano
+
+'
   invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:

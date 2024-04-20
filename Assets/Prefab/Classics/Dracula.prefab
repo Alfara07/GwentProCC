@@ -103,12 +103,8 @@ MonoBehaviour:
   Name: Dracula
   Faction: Classics
   Type: Silver Unit
-  leer: '"Dracula"
-
-
-    Unidad (Distancia)
-
-    Poder: 3'
+  leer: "\"Dracula\"\n\nUnidad (Distancia)\n\nHabilidad:\nElimina la carta con m\xE1s
+    pts de Poder en el campo\n"
   invocado: 0
 --- !u!61 &96271119224853782
 BoxCollider2D:

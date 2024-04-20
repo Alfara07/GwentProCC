@@ -102,7 +102,7 @@ MonoBehaviour:
   Name: Aquiles
   Faction: Classics
   Type: Gold Unit
-  leer: "\"Aquiles\"\n\nH\xE9roe (Infanter\xEDa)\nPoder: 7"
+  leer: "\"Aquiles\"\n\nH\xE9roe (Infanter\xEDa)\n"
   invocado: 0
 --- !u!61 &2422101990870155061
 BoxCollider2D:

@@ -107,7 +107,7 @@ MonoBehaviour:
 
     Unidad (Distancia)
 
-    Poder: 4'
+'
   invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:

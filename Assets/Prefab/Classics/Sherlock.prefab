@@ -102,7 +102,7 @@ MonoBehaviour:
   Name: Sherlock
   Faction: Classics
   Type: Silver Unit
-  leer: "\"Sherlock\"\n\nUnidad (Infanter\xEDa)\nPoder: 4"
+  leer: "\"Sherlock\"\n\nUnidad (Infanter\xEDa)\n"
   invocado: 0
 --- !u!61 &8696987318717794741
 BoxCollider2D:

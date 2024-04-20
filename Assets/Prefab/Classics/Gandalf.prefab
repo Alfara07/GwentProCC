@@ -102,7 +102,7 @@ MonoBehaviour:
   Name: Gandalf
   Faction: Classics
   Type: Gold Unit
-  leer: "\"Gandalf\"\n\nH\xE9roe (Distancia)\nPoder: 8"
+  leer: "\"Gandalf\"\n\nH\xE9roe (Distancia)\n"
   invocado: 0
 --- !u!61 &1035974706168688467
 BoxCollider2D:

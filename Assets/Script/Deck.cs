@@ -37,7 +37,7 @@ public class Deck : MonoBehaviour
     private void Start()
     {
         Shuffle();
-        MASTER(10);
+        
     }
 
     //Metodo para barajear las cartas de forma aleatoria.
@@ -136,6 +136,8 @@ public class Deck : MonoBehaviour
                         Comprobar(card);
                         return true;
                     }
+
+
                 }
 
                 //verificar si es carta clima
@@ -186,6 +188,18 @@ public class Deck : MonoBehaviour
                                 Destroy(Manager.campo[i]);
                                 Manager.campo[i] = null;    
                             }
+                        }
+                    }
+                }
+
+                if (card.GetComponent<CardsProperties>().Type == "Decoy")
+                {
+                    Manager.Decoy = card;
+                    for(int i = 0; i < Hands.Length;i++)
+                    {
+                        if (Hands[i] == card)
+                        {
+                            Manager.Decoy_Pos = i;
                         }
                     }
                 }

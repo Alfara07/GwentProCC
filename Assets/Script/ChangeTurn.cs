@@ -52,5 +52,7 @@ public class ChangeTurn : MonoBehaviour
        
 
         gameManager.Jugada = false;
+        gameManager.Decoy = null;
+
     }
 }

@@ -102,7 +102,7 @@ MonoBehaviour:
   Name: Maui
   Faction: Cartoons
   Type: Silver Unit
-  leer: "\"Maui\"\n\nUnidad (Infanter\xEDa)\nPoder: 5"
+  leer: "\"Maui\"\n\nUnidad (Infanter\xEDa)\n"
   invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:

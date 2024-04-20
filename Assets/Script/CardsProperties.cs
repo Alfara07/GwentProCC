@@ -19,7 +19,7 @@ public class CardsProperties : MonoBehaviour
     private RawImage BigCard;
     private GameObject Edit;
     private TextMeshProUGUI Description;
-
+    private GameManager manager;
     private void Start()
     {
         BigCard = GameObject.FindGameObjectWithTag("BigCard").GetComponent<RawImage>();
@@ -27,6 +27,7 @@ public class CardsProperties : MonoBehaviour
         Edit = GameObject.FindGameObjectWithTag("Edit");
         BigCard.transform.localScale = Vector3.zero;
         Edit.transform.localScale = Vector3.zero;
+        manager = GameObject.FindGameObjectWithTag("Admin").GetComponent<GameManager>();
     }
 
     //Metodos para mostrar y dejar de mostrar las cartas en grande
@@ -48,10 +49,37 @@ public class CardsProperties : MonoBehaviour
     //Evento que llama al metodo de invocacion
     private void OnMouseDown()
     {
+        bool se_toco = false;
         if(GameObject.FindGameObjectWithTag(Faction).GetComponent<Deck>().Invocar(gameObject))
         {
             invocado = true;
+            se_toco = true;
 
+        }
+        if(invocado && manager.Decoy != null && !se_toco && Type != "Decoy" && !manager.Jugada)
+        {
+            if (Type == "Silver Unit" || Type == "Gold Unit")
+            {
+                if (Faction == manager.Decoy.GetComponent<CardsProperties>().Faction)
+                {
+                    GameObject decoy = manager.Decoy;
+                    decoy.transform.position = gameObject.transform.position;
+                    if (Faction == "Classics")
+                    {
+                        manager.poder1 -= gameObject.GetComponent<AttackCardProperties>().Damage;
+                        gameObject.transform.position = manager.deck1.Positions[manager.Decoy_Pos].transform.position;
+                    }
+                    if (Faction == "Cartoons")
+                    {
+                        manager.poder2 -= gameObject.GetComponent<AttackCardProperties>().Damage;
+                        gameObject.transform.position = manager.deck2.Positions[manager.Decoy_Pos].transform.position;
+
+                    }
+                    invocado = false;
+                    manager.Jugada = true;
+                }
+                
+            }
         }
     }
 }

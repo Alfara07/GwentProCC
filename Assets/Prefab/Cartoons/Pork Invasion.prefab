@@ -105,7 +105,13 @@ MonoBehaviour:
   leer: '"Invacion Porcina"
 
 
-    Clima (Asedio)'
+    Clima (Asedio)
+
+
+    Habilidad:
+
+    Disminuye
+    2pts de Poder a todas las cartas de Asedio'
   invocado: 0
 --- !u!61 &4483653559645964826
 BoxCollider2D:

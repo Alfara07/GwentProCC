@@ -108,7 +108,14 @@ MonoBehaviour:
 
     Unidad (Asedio)
 
-    Poder: 3'
+
+    Habilidad:
+
+    Invoca una carta
+    de aumento de la mano
+
+
+'
   invocado: 0
 --- !u!61 &-4216734259644794872
 BoxCollider2D:

@@ -107,7 +107,7 @@ MonoBehaviour:
 
     Unidad (Asedio)
 
-    Poder: 5'
+'
   invocado: 0
 --- !u!61 &2540109399405733156
 BoxCollider2D:

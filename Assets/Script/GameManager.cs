@@ -15,11 +15,16 @@ public class GameManager : MonoBehaviour
     public int player = 1;
     public Deck deck1, deck2;
     public TextMeshProUGUI power1,power2,Ronda1,Ronda2;
+    
+    public GameObject Decoy = null;
+    public int Decoy_Pos;
 
+    public bool jug1, jug2 = true;
     private void Update()
     {
         Powers();
         End_Round();
+        End_Game();
     }
 
     //Funcion para para contar los poderes en el campo
@@ -41,6 +46,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void End_Game()
+    {
+        if (ronda1 == 2 && ronda2 != 2)
+        {
+            Dragon.SetActive(true);
+            Win1.SetActive(true);
+
+        }
+        if (ronda2 == 2 && ronda1 != 2)
+        {
+            Dragon.SetActive(true);
+            Win2.SetActive(true);
+
+        }
+    }
     //Funcion para determinar quien gana la ronda y hacer el conteo de rondas
 
     public void End_Round()
@@ -51,17 +71,12 @@ public class GameManager : MonoBehaviour
             if(poder1 < poder2)
             {
                 ronda2 += 1;
-                Dragon.SetActive(true);
-                Win2.SetActive(true);
-                StartCoroutine(Cerrar(Win2));
+                
             }
 
             if (poder1 > poder2)
             {
-                ronda1 += 1;
-                Dragon.SetActive(true);
-                Win1.SetActive(true);
-                StartCoroutine(Cerrar(Win1));
+                ronda1 += 1;               
             }
             if(poder1 == poder2)
             {
@@ -85,12 +100,5 @@ public class GameManager : MonoBehaviour
 
             }
         }
-    }
-
-    IEnumerator Cerrar(GameObject obj)
-    {
-        yield return new WaitForSeconds(4);
-        Dragon.SetActive(false);
-        obj.SetActive(false);
     }
 }

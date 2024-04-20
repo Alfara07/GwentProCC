@@ -105,7 +105,13 @@ MonoBehaviour:
   leer: '"Forja Enana"
 
 
-    Aumento (Asedio)'
+    Aumento (Asedio)
+
+
+    Habilidad:
+
+    Aumenta 3pts
+    de Poder a cada carta de su fila'
   invocado: 0
 --- !u!61 &3247783605855245134
 BoxCollider2D:

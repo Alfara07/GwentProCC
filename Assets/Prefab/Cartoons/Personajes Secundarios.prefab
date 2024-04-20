@@ -101,7 +101,8 @@ MonoBehaviour:
   Name: Personajes Secundarios
   Faction: Cartoons
   Type: Decoy
-  leer: "\"Personajes Secundarios\"\n\nSe\xF1uelo"
+  leer: "\"Personajes Secundarios\"\n\nSe\xF1uelo\n\nHabilidad:\nEs sustituible por
+    cualquier carta en las filas \n\nPoder: 0"
   invocado: 0
 --- !u!61 &-4279670466389327857
 BoxCollider2D:

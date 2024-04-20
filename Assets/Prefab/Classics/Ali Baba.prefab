@@ -103,7 +103,8 @@ MonoBehaviour:
   Name: Ali Baba
   Faction: Classics
   Type: Silver Unit
-  leer: "\"Ali Baba\"\n\nUnidad (Infanter\xEDa)\nPoder: 3"
+  leer: "\"Ali Baba\"\n\nUnidad (Infanter\xEDa)\n\nHabilidad:\nMultiplica su poder
+    por la cantidad de cartas de su tipo en el campo\n"
   invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:

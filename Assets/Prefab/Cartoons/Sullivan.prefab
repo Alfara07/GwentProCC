@@ -102,7 +102,7 @@ MonoBehaviour:
   Name: Sullivan
   Faction: Cartoons
   Type: Gold Unit
-  leer: "\"Sullivan\"\n\nH\xE9roe (Distancia)\nPoder: 7"
+  leer: "\"Sullivan\"\n\nH\xE9roe (Distancia)\n"
   invocado: 0
 --- !u!61 &2422101990870155061
 BoxCollider2D:

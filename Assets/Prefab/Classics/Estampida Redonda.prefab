@@ -102,7 +102,8 @@ MonoBehaviour:
   Name: Estampida Redonda
   Faction: Classics
   Type: Increased
-  leer: "\"Estampida Redonda\"\n\nAumento (Infanter\xEDa)\n"
+  leer: "\"Estampida Redonda\"\n\nAumento (Infanter\xEDa)\n\nHabilidad:\nAumenta
+    3pts de Poder a cada carta de su fila"
   invocado: 0
 --- !u!61 &2245350808713511831
 BoxCollider2D:

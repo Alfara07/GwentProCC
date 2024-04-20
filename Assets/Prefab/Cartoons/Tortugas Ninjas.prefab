@@ -102,7 +102,7 @@ MonoBehaviour:
   Name: Tortugas Ninjas
   Faction: Cartoons
   Type: Silver Unit
-  leer: "\"Tortugas Ninjas\"\n\nUnidad (Infanter\xEDa)\nPoder: 4"
+  leer: "\"Tortugas Ninjas\"\n\nUnidad (Infanter\xEDa)\n"
   invocado: 0
 --- !u!61 &9207799983204163246
 BoxCollider2D:

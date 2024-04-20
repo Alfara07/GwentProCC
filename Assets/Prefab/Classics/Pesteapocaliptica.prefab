@@ -105,7 +105,13 @@ MonoBehaviour:
   leer: '"Pesteapocaliptica"
 
 
-    Clima (Distancia)'
+    Clima (Distancia)
+
+
+    Habilidad:
+
+    Disminuye
+    2pts de Poder a todas las cartas de Distancia'
   invocado: 0
 --- !u!61 &-3294477730769909086
 BoxCollider2D:

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Mickey Mause
-  Faction: ' Cartoons'
+  Faction: Cartoons
   Type: Leader
   leer: "\"Mickey Mause\"\n\nL\xEDder"
   invocado: 0

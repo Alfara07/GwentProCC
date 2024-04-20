@@ -105,7 +105,13 @@ MonoBehaviour:
   leer: '"El Padrino"
 
 
-    Aumento (Distancia)'
+    Aumento (Distancia)
+
+
+    Habilidad:
+
+    Aumenta 3pts
+    de Poder a cada carta de su fila'
   invocado: 0
 --- !u!61 &5459555634650956204
 BoxCollider2D:
